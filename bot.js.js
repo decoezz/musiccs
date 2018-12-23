@@ -24,6 +24,23 @@ const prefix = "2";
 /////////////////////////
 ////////////////////////
 
+client.on('message', message => {
+    if (message.content.startsWith("-dick")) {
+   
+        // pretty shitty command
+
+        let dicksize = ["=", "==", "===", "====", "=====", "======", "=======", "========", "=========", "=========="];
+        let dickuser = message.mentions.users.first();
+
+        if (!dickuser) {
+            return message.channel.send('You must mention someone!');
+        }
+
+        message.channel.send(`**${dickuser} Size: ** 8${dicksize[~~Math.floor(Math.random() * dicksize.length)]}D\nSized by **${message.author.tag}**`);
+       
+    }
+});
+
 client.on('message', async msg =>{
 	if (msg.author.bot) return undefined;
     if (!msg.content.startsWith(prefix)) return undefined;
