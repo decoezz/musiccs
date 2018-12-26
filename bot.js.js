@@ -25,7 +25,7 @@ const prefix = "2";
 ////////////////////////
 
 client.on('message', message => {
-    if (message.content.startsWith("-dick")) {
+    if (message.content.startsWith("-زيب")) {
    
         // pretty shitty command
 
